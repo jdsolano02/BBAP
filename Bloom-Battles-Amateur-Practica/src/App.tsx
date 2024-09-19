@@ -95,6 +95,10 @@ const App = () => {
         Los cafes disponibles son los de la Bloom Box de setiembre 2024 sin
         embargo puedes usar el que quieras en tu casa
       </p>
+      <p>
+        si de casualidad sale un metodo que no tienes en casa, vuelve a
+        seleccionar el boton hasta que salga uno que si tengas
+      </p>
       <div>
         <label htmlFor="round">Selecciona la ronda:</label>
 
