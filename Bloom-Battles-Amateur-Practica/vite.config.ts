@@ -5,4 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/<BBAP>/", // Replace <BBAP> with your repository name if necessary
+  build: {
+    outDir: "dist", // Ensure this is set to 'dist'
+  },
 });
