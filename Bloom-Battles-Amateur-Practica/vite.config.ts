@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/BBAP/",
+  base: "/<BBAP>/", // Replace <BBAP> with your repository name if necessary
 });
