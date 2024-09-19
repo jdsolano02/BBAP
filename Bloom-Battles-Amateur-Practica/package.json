@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://jdsolano02.github.io/BBAP/index.html",
+  "homepage": "https://jdsolano02.github.io/BBAP/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
