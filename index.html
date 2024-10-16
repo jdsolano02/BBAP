@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Bloom Battles Amateur Practice</title>
+
+    <!-- Tailwind CSS-->
+    <link href="./output.css" rel="stylesheet" />
+    <!-- Link to the external JavaScript file -->
+    <script defer src="script.js"></script>
+  </head>
+
+  <body class="bg-gray-100 p-8">
+    <div class="max-w-xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+      <h1 class="text-2xl font-bold mb-4">
+        Bloom Battles Amateur Coffee Competition
+      </h1>
+      <div>
+        <!-- Coffee Input -->
+        <label for="coffeeInput" class="block text-sm font-medium text-gray-700"
+          >Ingrese sus cafés (separados por comas):</label
+        >
+        <input
+          type="text"
+          id="coffeeInput"
+          class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        />
+
+        <!-- Round Selection -->
+        <label
+          for="roundSelect"
+          class="block text-sm font-medium text-gray-700 mt-4"
+          >Seleccione la ronda:</label
+        >
+        <select
+          id="roundSelect"
+          class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        >
+          <option value="16ths">16ths</option>
+          <option value="8ths">8ths</option>
+          <option value="4ths">4ths</option>
+          <option value="semifinals">Semifinals</option>
+          <option value="finals">Finals</option>
+        </select>
+
+        <!-- Generate Recipe Button -->
+        <button
+          id="generateRecipeBtn"
+          class="mt-4 w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
+        >
+          Generar Receta
+        </button>
+
+        <!-- Initial Recipe Result -->
+        <div id="result" class="mt-4 hidden">
+          <h2 class="text-lg font-bold">Tu receta es la siguiente:</h2>
+          <p id="recipeDetails" class="mt-2"></p>
+          <div id="followUp" class="mt-4 hidden">
+            <p>Hiciste la receta?</p>
+            <button
+              id="yesBtn"
+              class="bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600"
+            >
+              Sí
+            </button>
+            <button
+              id="noBtn"
+              class="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <!-- Additional Inputs for 'Yes' -->
+        <div id="additionalInputs" class="mt-4 hidden">
+          <label
+            for="commanderClicks"
+            class="block text-sm font-medium text-gray-700"
+            >Clicks en comandante:</label
+          >
+          <input
+            type="number"
+            id="commanderClicks"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+
+          <label
+            for="waterTemp"
+            class="block text-sm font-medium text-gray-700 mt-4"
+            >Temperatura del agua:</label
+          >
+          <input
+            type="number"
+            id="waterTemp"
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          />
+
+          <div id="optionalItemsContainer" class="mt-4"></div>
+
+          <button
+            id="finalRecipeBtn"
+            class="mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+          >
+            Ver Receta Final
+          </button>
+        </div>
+
+        <!-- Final Recipe Result -->
+        <div id="finalResult" class="mt-4 hidden">
+          <h2 class="text-lg font-bold">Detalles de la receta final:</h2>
+          <p id="finalDetails" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
